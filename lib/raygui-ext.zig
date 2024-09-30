@@ -13,7 +13,7 @@ pub extern "c" fn GuiSetState(state: c_int) void;
 pub extern "c" fn GuiGetState() c_int;
 pub extern "c" fn GuiSetFont(font: rl.Font) void;
 pub extern "c" fn GuiGetFont() rl.Font;
-pub extern "c" fn GuiSetStyle(control: rgui.GuiState, property: rgui.GuiControlProperty, value: c_int) void;
+pub extern "c" fn GuiSetStyle(control: rgui.GuiState, property: c_int, value: c_int) void;
 pub extern "c" fn GuiGetStyle(control: rgui.GuiState, property: rgui.GuiControlProperty) c_int;
 pub extern "c" fn GuiLoadStyle(fileName: [*c]const u8) void;
 pub extern "c" fn GuiLoadStyleDefault() void;

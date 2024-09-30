@@ -6,9 +6,7 @@ test {
     std.testing.refAllDeclsRecursive(@This());
 }
 
-pub const RayguiError = error{
-    GetIcons
-};
+pub const RayguiError = error{GetIcons};
 
 const Vector2 = rl.Vector2;
 const Vector3 = rl.Vector3;
@@ -513,7 +511,7 @@ pub fn guiGetFont() Font {
 }
 
 /// Set one style property
-pub fn guiSetStyle(control: GuiState, property: GuiControlProperty, value: i32) void {
+pub fn guiSetStyle(control: GuiState, property: c_int, value: i32) void {
     cdef.GuiSetStyle(control, property, @as(c_int, value));
 }
 
